@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Tanis Steven Blinn</title>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/my-code.js"></script>
+<link rel="stylesheet" type="text/css" href="css/intro.css"/>
+<link rel="stylesheet" type="text/css" href="css/w3.css"/>
+</head>
+
+<body>
+	<div id="banner">
+	<p>Welcome!</p>
+	<h2>Intro Website created by Tanis B!</h2>
+	</div>
+	<hr>
+	<li class="w3-dropdown-hover w3-hover-cyan">
+				<a class="w3-hover-teal" href="#">My Favs <i class="fa fa-caret-down"> </i></a>
+				<div class="w3-dropdown-content w3-white w3-card-4">
+					<a href="http://www.google.com">Google</a>
+					<a href="#">West Ada</a>
+					<a href="#">another one</a>
+					<a href="#">and one more</a>
+				</div>
+			</li>
+ <ul class="w3-navbar w3-card-2 w3-yellow">
+  <li><a href="http://192.168.1.156/a2mcclendon">Mr. M</a></li>
+  <li><a href="http://192.168.1.115/MyIntroWebPage">Andrew</a></li>
+  <li class="w3-dropdown-hover">
+    <a href="#">CHS</a>
+    <div class="w3-dropdown-content w3-white w3-card-4">
+      <a href="#">Eli Tanner</a>
+      <a href="#">Ashley Xu</a>
+      <a href="http://192.168.1.115/MyIntroWebPage">Andrew Holbrook</a>
+      <a href="#">Savanah Crow</a>
+      <a href="#">Robert Gillspie</a>
+    </div>
+  </li>
+  <li class="w3-dropdown-hover">
+    <a href="#">EHS</a>
+    <div class="w3-dropdown-content w3-white w3-card-4">
+      <a href="#">Ethan Parks</a>
+      <a href="#">Richard McClure</a>
+    </div>
+  </li>
+  <li class="w3-dropdown-hover">
+    <a href="#">MA</a>
+    <div class="w3-dropdown-content w3-white w3-card-4">
+      <a href="#">Bryan Higgins</a>
+     </div>
+  </li>
+<li class="w3-dropdown-hover">
+    <a href="#">MHS</a>
+    <div class="w3-dropdown-content w3-white w3-card-4">
+      <a href="#">Tyler Plaisted</a>
+      <a href="http://192.168.1.114/a2Barajas">Neomi Brajas</a>
+      <a href="#">Tanis Steven Blinn</a>
+      <a href="#">Nicole Cline</a>
+      <a href="#">Vic Saenz</a>
+    </div>
+  </li>
+<li class="w3-dropdown-hover">
+    <a href="#">MVHS</a>
+    <div class="w3-dropdown-content w3-white w3-card-4">
+      <a href="#">Daniel Carlson</a>
+      <a href="#">Briana Stefan</a>
+      <a href="#">Micah Gomez</a>
+    </div>
+  </li>
+<li class="w3-dropdown-hover">
+    <a href="#">RMHS</a>
+    <div class="w3-dropdown-content w3-white w3-card-4">
+      <a href="#">Cole Patterson</a>
+      <a href="#">Andrew Wheeler</a>
+      <a href="#">Alex Bleak</a>
+      <a href="#">Chase Seeberger</a>
+      <a href="#">David Brigeman</a>
+    </div>
+  </li>
+</ul>
+<br>
+
+<div>
+<h1>Click here to show one of my favorites pictures</h1>
+<img style="display: none;" id="topPicture" src="images/ScourgetheEvilHedgehog.jpg" alt="Scourge the Evil Hedghog" height="450" width="500"/>
+</div>
+
+<div class="w3-content" style="max-width:500px; max-height:450px; position:relative">
+
+<div class="w3-display-container mySlides">
+  <img src="images/hazenthehedgehog.png" style="width:50% height:50%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Hazen the Hedgehog
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images/SanctumtheHedgehog.png" style="width:50%; height:50%" >
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Sanctum the Hedgehog
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images/DanitheFox.jpg" style="width:50%; height:50%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Dani the Fox
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images/SteeltheHedgehog.png" style="width:50% height:50%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+  	Steel the Hegehog
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images/FionaFox.jpg" style="width:0% height:0%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Fiona the Fox
+  </div>
+</div>
+
+<a class="w3-btn-floating w3-hover-dark-grey" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)">[</a>
+<a class="w3-btn-floating w3-hover-dark-grey" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)">]</a>
+
+</div>
+<div>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1;}   
+  if (n < 1) {slideIndex = x.length;}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+};
+</script>
+</div>
+<br>
+<hr>
+<br>
+
+
+<div id="jq02"> 
+	<script>
+	var slideIndex = 1;
+			showDivs(slideIndex);
+
+			function plusDivs(n) {
+				showDivs(slideIndex += n);
+			};
+
+			function showDivs(n) {
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				if (n > x.length) {
+					slideIndex = 1;
+				};
+				if (n < 1) {
+					slideIndex = x.length;
+				};
+				for ( i = 0; i < x.length; i++) {
+					x[i].style.display = "none";
+				};
+				x[slideIndex - 1].style.display = "block";
+			}
+		</script>
+</div>
+		<!-- Practice jq02 -- buttons -->
+
+		<br>
+		<hr>
+		<br>
+
+		<input id="testbutton" type="button" value="push me">
+		<div>
+			<h3>This is the <strong>first</strong> line of text for practice</h3>
+			<h3>This is the <strong>second</strong> line of text for practice</h3>
+		</div>
+
+		<h3>This is the <strong>third</strong> line of text for practice</h3>
+		<h3>This is the <strong>fourth</strong> line of text for practice</h3>
+		<br>
+		<hr>
+		<br>
+		<h4> jq mouseover etc video</h4>
+		
+</body>
+</html>
